@@ -36,7 +36,6 @@ function renderOneWrestler(wrestler) {
     //if the name of the wrestlers is mouseovered, the object information will be passed to the wrestler container.
     function mouseOver(wrestler) {
         li.style.backgroundColor = "red";
-        //document.querySelector('#wrestler-card').hidden = true;
         document.querySelector('#wrestler-container').innerHTML = "";
         wrestlerContainer(wrestler);
     }
@@ -44,7 +43,6 @@ function renderOneWrestler(wrestler) {
     //if the name of the wrestler is mouse outed, the object information from the wrestler container will be deleted.
     function mouseOut() {
         li.style.backgroundColor = "black";
-        //document.querySelector('#wrestler-card').hidden = false;
         document.querySelector('#wrestler-container').innerHTML = "";
     }
     document.querySelector('#wrestler-list2').appendChild(li);
@@ -105,6 +103,22 @@ function updateLikes(wrestlerObj) {
       .then(res => res.json())
     }
 
+//once the eliminate wrestler button is clicked, it will delete the wrestler in the db.json and refetch the wrestler list.
+function deleteWrestler(wrestlerObj) {
+    fetch(`http://localhost:3000/wrestlers/${wrestlerObj.id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(wrestlerObj)
+      })
+      .then(res => res.json())
+      .then(() => {
+        fetchWrestlers();
+        document.querySelector('#wrestler-card').innerHTML = `<img src=images/wrestlercollection.jpg width=500px>`
+        })
+}
+
     //when the add new wrestler submit button is clicked, it will gather all infromation and create an object, will then be passed to addNewWrestler.
     function handleNewWrestler(wrestler) {
         wrestler.preventDefault();
@@ -131,22 +145,4 @@ function updateLikes(wrestlerObj) {
         })
         .then(res => res.json())
         .then(() => fetchWrestlers())
-        .then(console.log('add new wrestler is completed'))    
-    }
-
-    //once the eliminate wrestler button is clicked, it will delete the wrestler in the db.json and refetch the wrestler list.
-    function deleteWrestler(wrestlerObj) {
-        fetch(`http://localhost:3000/wrestlers/${wrestlerObj.id}`, {
-            method: 'DELETE',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(wrestlerObj)
-          })
-          .then(res => res.json())
-          .then(() => {
-            fetchWrestlers();
-            document.querySelector('#wrestler-card').innerHTML = `<img src=images/wrestlercollection.jpg width=500px>`
-            })
-          .then(console.log('deletewrestler is completed'))
     }
