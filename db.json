@@ -1,0 +1,112 @@
+{
+  "wrestlers": [
+    {
+      "id": "1",
+      "name": "Stone Cold Steve Austin",
+      "hometown": "Texas",
+      "finisher": "Stone Cold Stunner",
+      "catchphrase": "And that's the bottom line, cause Stone Cold said so!",
+      "image": "images/stonecoldsteveaustin.jpg",
+      "votes": 15
+    },
+    {
+      "id": "2",
+      "name": "The Rock",
+      "hometown": "Miami, Florida",
+      "finisher": "Rock Bottom",
+      "catchphrase": "If you smell what The Rock is cooking!",
+      "image": "images/therock.jpg",
+      "votes": 19
+    },
+    {
+      "id": "3",
+      "name": "Triple H",
+      "hometown": "Greenwich, Connecticut",
+      "finisher": "The Pedigree",
+      "catchphrase": "I - Am - The - Game! And I Am THAT-DAMN-GOOD!",
+      "image": "images/tripleh.jpg",
+      "votes": 17
+    },
+    {
+      "id": "4",
+      "name": "Hulk Hogan",
+      "hometown": "Tampa Florida",
+      "finisher": "Atomic Leg Drop",
+      "catchphrase": "Watcha gonna do when the hulkster runs wild on YOU?",
+      "image": "images/hulkhogan.jpg",
+      "votes": 11
+    },
+    {
+      "id": "5",
+      "name": "John Cena",
+      "hometown": "West Newbury, Massachusetts",
+      "finisher": "Attitude Adjustment",
+      "catchphrase": "You can't see me!",
+      "image": "images/johncena.jpg",
+      "votes": 12
+    },
+    {
+      "id": "6",
+      "name": "The Undertaker",
+      "hometown": "Death Valley, California",
+      "finisher": "Tombstone Piledriver",
+      "catchphrase": "Rest In Peace!",
+      "image": "images/undertaker.jpg",
+      "votes": 8
+    },
+    {
+      "id": "7",
+      "name": "Macho Man",
+      "hometown": "Columbus, Ohio",
+      "finisher": "Flying Elbow Drop",
+      "catchphrase": "Oooh yeah!",
+      "image": "images/machoman.jpg",
+      "votes": 14
+    },
+    {
+      "id": "8",
+      "name": "Mankind",
+      "hometown": "The Boiler Room",
+      "finisher": "The Mandible Claw",
+      "catchphrase": "Have a nice day!",
+      "image": "images/mankind.jpg",
+      "votes": 29
+    },
+    {
+      "id": "9",
+      "name": "Cody Rhodes",
+      "hometown": "Marietta, Georgia",
+      "finisher": "The Cross Rhodes",
+      "catchphrase": "The story continues",
+      "image": "images/codyrhodes.jpg",
+      "votes": 4
+    },
+    {
+      "id": "10",
+      "name": "Razor Ramon",
+      "hometown": "Miami, Florida",
+      "finisher": "Razor's Edge",
+      "catchphrase": "Say hello to The Bad Guy!",
+      "image": "images/razorramon.jpg",
+      "votes": 6
+    },
+    {
+      "id": "6ffa",
+      "name": "Roman Reigns",
+      "hometown": "Pensacola, Florida",
+      "finisher": "The Guillotine",
+      "catchphrase": "Acknowledge me",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Roman_Reigns_May_2019.jpg/505px-Roman_Reigns_May_2019.jpg",
+      "votes": 8
+    },
+    {
+      "id": "c877",
+      "name": "Bret The Hitman Hart",
+      "hometown": "Calgrary, Canada",
+      "finisher": "Sharpshooter",
+      "catchphrase": "The best there is, the best there was, and the best that ever will be!",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Bret_Hart_WWF_Champion.jpg",
+      "votes": 25
+    }
+  ]
+}

@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<hmtl lang="en">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <title>Document</title>
+        <link rel="stylesheet" href="index.css">
+        <title>Royal Rumble</title>
     </head>
     <body>
+        <header align="center">
+            <img src="images/royalrumble2019logo.png" alt="Royal Rumble logo" />
+            <h1>Welcome to Royal Rumble</h1>
+            <h2>Vote for your wrestler! The wrestler with the most votes is the winner!</h2>
+        </header>
+        <div class="row">
+            <div id="wrestler-list" class="column">
+                <h1 align="center">CHOOSE YOUR WRESTLER</h1>
+                <ol id="wrestler-list2"></ol><br>
+                <button type="button" id="sort-btn" align="center" style="background:red; color:white">Check who's at the top!</button>
+            </div>
+            <div id="wrestler-container" class="column"></div>
+            <div id="wrestler-card" class="column">
+                <img src="images/wrestlercollection.jpg" width=500px>
+            </div>
+            <div class="column">
+                <h1 align="center">ADD A WRESTLER</h1>
+                <form class="form-example">
+                    <div class="form-example">
+                      <label for="name">Name: </label>
+                      <input type="text" name="name" id="name" required />
+                    </div>
+                    <div class="form-example">
+                      <label for="hometown">Hometown: </label>
+                      <input type="text" name="hometown" id="hometown"  />
+                    </div>
+                    <div class="form-example">
+                        <label for="finisher">Finishing Move: </label>
+                        <input type="finisher" name="finisher" id="finisher"  />
+                      </div>
+                      <div class="form-example">
+                        <label for="catchphrase">Catch Phrase: </label>
+                        <input type="catchphrase" name="catchphrase" id="catchphrase"  />
+                      </div>
+                      <div class="form-example">
+                        <label for="image">Image: </label>
+                        <input type="text" name="image" id="image"  />
+                      </div>
+                    <div class="form-example">
+                      <input type="submit" value="Add Another Wrestler!" style="background:red; color:white"/>
+                    </div>
+                  </form>
+            </div>
+        </div>
         <script src="index.js"></script>
     </body>
 </hmtl>

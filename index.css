@@ -1,0 +1,53 @@
+body {
+    background-color: black; 
+    color: white;
+    font-family: monospace;
+}
+
+#wrestler-card {
+    border:10px solid red;
+    background-color: red; 
+    color: black;
+    font-family: monospace;
+}
+#wrestler-container {
+    border:10px solid grey;
+    background-color: grey; 
+    color: black;
+    font-family: monospace;
+}
+
+.row {
+    width: 100%;
+}
+
+.column {
+    border:5px solid black;
+    float: left;
+  }
+  
+  .left, .right {
+    width: 25%;
+  }
+  
+  .middle {
+    width: 50%;
+  }
+
+  .column2 {
+    float: left;
+    width: 250px;
+    text-wrap: wrap;
+  }
+
+  #wrestler-list2 {
+    font-size: 20px;
+  }
+
+  .form-example {
+    font-size: 20px;
+  }
+
+  header {
+    border:5px solid black;
+  }
