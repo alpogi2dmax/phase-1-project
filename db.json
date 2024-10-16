@@ -7,7 +7,7 @@
       "finisher": "Stone Cold Stunner",
       "catchphrase": "And that's the bottom line, cause Stone Cold said so!",
       "image": "images/stonecoldsteveaustin.jpg",
-      "votes": 15
+      "votes": 18
     },
     {
       "id": "2",
@@ -88,7 +88,7 @@
       "finisher": "Razor's Edge",
       "catchphrase": "Say hello to The Bad Guy!",
       "image": "images/razorramon.jpg",
-      "votes": 6
+      "votes": 20
     },
     {
       "id": "6ffa",
@@ -106,7 +106,16 @@
       "finisher": "Sharpshooter",
       "catchphrase": "The best there is, the best there was, and the best that ever will be!",
       "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Bret_Hart_WWF_Champion.jpg",
-      "votes": 25
+      "votes": 28
+    },
+    {
+      "id": "f3e0",
+      "name": "Andre the Giant",
+      "hometown": "Miami, Florida",
+      "finisher": "",
+      "catchphrase": "",
+      "image": "",
+      "votes": 5
     }
   ]
 }

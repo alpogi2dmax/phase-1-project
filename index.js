@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetchWrestlers();
     document.querySelector('#sort-btn').addEventListener('click', () => {
-    fetchWrestlers();
-});
+        fetchWrestlers();
+    });
     document.querySelector('form').addEventListener('submit', handleNewWrestler);
-
 });
 
 
@@ -21,36 +20,38 @@ function fetchWrestlers() {
 
 //after fetching the wrestlers objects, it will then be rendered in the wrestlers list column.
 function renderOneWrestler(wrestler) {
-    let li = document.createElement('li');
+
+     //if the name of the wrestler is mouse outed, the object information from the wrestler container will be deleted.
+     const mouseOut = () => {
+        li.style.backgroundColor = "black";
+        document.querySelector('#wrestler-container').innerHTML = "";
+    }    
+
+    const li = document.createElement('li');
     li.innerText = wrestler.name;
     li.addEventListener('click', () => mouseClick(wrestler));
     li.addEventListener('mouseover', () => mouseOver(wrestler));
-    li.addEventListener('mouseout', () => mouseOut());
+    li.addEventListener('mouseout', mouseOut);
 
     //if the name of the wrestlers is clicked, the object information will be passed to the wrestler card.
-    function mouseClick(wrestler) {
+    const mouseClick = (wrestler) => {
         document.querySelector('#wrestler-card').innerHTML = "";
             wrestlerCard(wrestler);
     }
     
     //if the name of the wrestlers is mouseovered, the object information will be passed to the wrestler container.
-    function mouseOver(wrestler) {
+    const mouseOver = (wrestler) => {
         li.style.backgroundColor = "red";
-        document.querySelector('#wrestler-container').innerHTML = "";
+        //document.querySelector('#wrestler-container').innerHTML = "";
         wrestlerContainer(wrestler);
     }
 
-    //if the name of the wrestler is mouse outed, the object information from the wrestler container will be deleted.
-    function mouseOut() {
-        li.style.backgroundColor = "black";
-        document.querySelector('#wrestler-container').innerHTML = "";
-    }
     document.querySelector('#wrestler-list2').appendChild(li);
 }
 
 //from the mouseover, the wrestler object information will be displayed to the wrestler container column.
 function wrestlerContainer(wrestler) {
-    let card = document.createElement('div');
+    const card = document.createElement('div');
     card.innerHTML = `
         <div class="column3">
         <img src="${wrestler.image}" width=100px>
@@ -61,7 +62,7 @@ function wrestlerContainer(wrestler) {
 
 //if the wrestler name is clicked from the wrestler list, the wrestler object info will be show in the wrestler card.
 function wrestlerCard(wrestler) {
-    let card = document.createElement('div');
+    const card = document.createElement('div');
     card.innerHTML = `
         <div class="column2">
         <img src="${wrestler.image}" width=250px>
@@ -76,6 +77,7 @@ function wrestlerCard(wrestler) {
         <button type="button" id='eliminate-btn' style="background:black; color:white"><b>ELIMINATE WRESTLER!</b></button>
         </div>
         `
+
     //if the vote button is clicked within the wrestler card, it will add votes and will be added to the db.json.     
     card.querySelector('#vote-btn').addEventListener('click', () => {
         wrestler.votes += 1;
